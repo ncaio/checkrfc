@@ -4,7 +4,7 @@ Usar o comando HELO para identificar MX
 
 
 Exemplo:
-
+`
 #./check-helo.go 192.185.47.80
 
 ------------------------------
@@ -44,4 +44,4 @@ MX:
 websitewelcome.com.
 Conexao OK
 ------------------------------
-
+`
