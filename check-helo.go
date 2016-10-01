@@ -59,6 +59,15 @@ func main() {
 			fmt.Println("Erro ao conectar")
 		}else{
 			fmt.Println("Conexao OK")
+        		conn, err := net.Dial("tcp", mx[i].Host+":25")
+        		if err != nil {
+                		fmt.Println(err)
+                		os.Exit(1)
+        		}
+        		defer conn.Close()
+        		var readbuf [512]byte
+        		n, _ := conn.Read(readbuf[0:])
+        		os.Stdout.Write(readbuf[0:n])
 		}			
 	}
 	fmt.Println("------------------------------")
